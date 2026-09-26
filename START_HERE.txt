@@ -1,0 +1,29 @@
+WINDOWS SECURITY POSTURE CHECKER - C#
+Coded by Cyber Security Engineer Mr Sabaz Ali Khan
+
+1. ZIP ko poora extract karein.
+2. build_windows.bat double-click karein.
+3. Build successful ho to run_windows.bat open karein.
+4. Scan this computer button dabayein.
+5. Finding select karke evidence aur guidance parhein.
+6. Export full report se HTML, CSV ya JSON save karein.
+
+Visual Studio ka tareeqa:
+.NET desktop development workload aur .NET Framework 4.8 targeting tools install karein.
+SecurityPostureChecker.csproj open karein, phir Build aur Run karein.
+
+PASS: sirf ye particular check theek mila.
+WARNING: check mein concern mila.
+REVIEW: context ya manual verification chahiye.
+UNKNOWN: check verify nahi ho saka; iska matlab safe nahi hai.
+INFO: sirf information hai.
+
+Zyada evidence ke liye built EXE par right-click > Run as administrator
+kar sakte hain, agar is computer par aapko authorization hai.
+Kuch checks edition/hardware ki wajah se phir bhi UNKNOWN ho sakte hain.
+
+Ye app settings change nahi karta aur automatic fix nahi karta.
+Ye antivirus ya complete vulnerability scanner nahi hai.
+Windows EXE included nahi hai: pehle compile karna hai.
+Is environment mein Windows build/run test nahi ho saka.
+Detailed guide: README.md

@@ -1,0 +1,24 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{CC7F5E88-6693-4114-937C-2C122D6624CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sabaz.SecurityPosture</RootNamespace>
+    <AssemblyName>SecurityPostureChecker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>5</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AppConfig>SecurityPostureChecker.exe.config</AppConfig>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Drawing"/>
+    <Reference Include="System.Windows.Forms"/><Reference Include="System.Web.Extensions"/>
+    <Compile Include="src\Program.cs"/><Compile Include="src\MainForm.cs"/>
+    <Compile Include="src\Models.cs"/><Compile Include="src\Collector.cs"/><Compile Include="src\Export.cs"/>
+    <EmbeddedResource Include="src\Collect.ps1"><LogicalName>Sabaz.Collect.ps1</LogicalName></EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
